@@ -107,6 +107,14 @@ section h2 {
     text-transform: uppercase;
 }
 
+/* main 안의 h3 스타일 */
+main h3 {
+    font-size: 2.5em; /* 크기 키움 */
+    color: #fff; /* 하얀색 */
+    margin-top: 15px; /* 위쪽 여백 추가 */
+    margin-bottom: 10px; /* 아래쪽 여백 추가 */
+}
+
 /* 기본적으로 main 안의 h2를 하얀색으로 설정 */
 main h2 {
     color: #fff; /* 하얀색 */
