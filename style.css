@@ -160,17 +160,17 @@ section {
 
 /* #community를 제외한 섹션에 배경 이미지와 오버레이 추가 */
 #about {
-    background: url('trump-meme.png') center no-repeat;
+    background: url('v.png') center no-repeat;
     background-size: contain; /* 이미지가 잘리지 않도록 */
 }
 
 #tokenomics {
-    background: url('moon-rocket.png') center no-repeat;
+    background: url('wine.png') center no-repeat;
     background-size: contain;
 }
 
 #roadmap {
-    background: url('meme-coin.png') center no-repeat;
+    background: url('dance.png') center no-repeat;
     background-size: contain;
 }
 
