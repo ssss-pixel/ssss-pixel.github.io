@@ -116,7 +116,7 @@ section h2 {
 
 /* main 안의 h3 스타일 */
 main h3 {
-    font-size: 2.0em; /* 크기 키움 */
+    font-size: 1.7em; /* 크기 키움 */
     color: #fff; /* 하얀색 */
     margin-top: 15px; /* 위쪽 여백 추가 */
     margin-bottom: 10px; /* 아래쪽 여백 추가 */
