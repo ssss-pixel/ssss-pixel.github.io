@@ -6,48 +6,57 @@
     <title>Officially Not Trump - PMURT</title>
     <!-- AOS CSS CDN -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <!-- Link to stylesheet (assuming you have one) -->
+    <!-- Link to stylesheet -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header class="hero">
         <div class="hero-content">
-            <h1>Officially Not Trump</h1>
-            <h2>Ticker: PMURT</h2>
-            <h3>CA</h3>
-            <h3><span class="contract-address">1danbdkjasnkcxzmqqiwjrqo9ejowfmnxmcnnncnamsd12nnxajsn33</span></h3>
-            <a href="#about" class="btn">Learn More (No Cap)</a>
-        </div>
+    <h1 data-aos="fade-down" data-aos-delay="100">Officially Not Trump</h1>
+    <h2 data-aos="fade-down" data-aos-delay="200">Ticker: PMURT</h2>
+    <h3 data-aos="fade-down" data-aos-delay="300">CA</h3>
+    <h3 data-aos="fade-down" data-aos-delay="400">
+        <span class="contract-address" onclick="copyToClipboard(this)" ontouchstart="copyToClipboard(this)">
+            1danbdkjasnkcxzmqqiwjrqo9ejowfmnxmcnnncnamsd12nnxajsn33
+        </span>
+    </h3>
+    <a href="#about" class="btn" data-aos="fade-up" data-aos-delay="500">Learn More (No Cap) 💯🔥</a>
+</div>
     </header>
     <main>
         <section id="about" data-aos="fade-up">
             <h2>About</h2>
             <p>
-                <h3>Officially Not Trump 🚫</h3><br>
-                <h3>The Best Memes, Believe Me 🎉</h3><br>
-                <h3>No Tariff, No cap💯🔥</h3><br>
-                <h3>No Dumps, Only Pumps 📈</h3><br>
-                <h3>No Scams, Just Vibes 💎🙌</h3><br>
+                <h3>Officially Not Trump 🚫</h3>
+                <h3>The Best Memes, Believe Me 🎉</h3>
+                <h3>No Tariffs on Laughs, No Cap 💯🔥</h3>
+                <h3>No Dumps, Only Pumps 📈</h3>
+                <h3>No Scams, Just Vibes 💎🙌</h3>
             </p>
         </section>
         <section id="tokenomics" data-aos="fade-up">
             <h2>Our Goal</h2>
             <p>
-                <h3>1. 1 $PMURT = 1 $TRUMP—Fairness, Bigly! ⚖️</h3><br>
-                <h3>2. Market Cap Mooning Past $TRUMP 🚀🌕</h3><br>
+                <h3>1. 1 $PMURT = 1 $TRUMP—Fairness, Bigly! ⚖️</h3>
+                <h3>2. Market Cap Mooning Past $TRUMP 🚀🌕</h3>
                 <h3>3. Crafting a Peaceful World, No Rug Pulls 🌍✌️</h3>
             </p>
         </section>
         <section id="roadmap" data-aos="fade-up">
-            <h2>How to buy</h2>
+            <h2>How to Buy</h2>
             <p>
-                <h3>1. Hit Up Pumpfun, Fam 🤑</h3><br>
-                <h3>2. Search the CA—It’s Lit 🔥<span class="contract-address" onclick="copyToClipboard(this)">1danbdkjasnkcxzmqqiwjrqo9ejowfmnxmcnnncnamsd12nnxajsn33</span></h3><br><br>
-                <h3>3. Buy, HODL, Shill to the Moon 🚀🌙</h3>
+                <h3>1. Hit Up Pumpfun, Fam—Let’s Get This Bread 🤑🍞</h3>
+                <h3>2. Search the CA (Contract Address), It’s Lit! 🔥 
+                    <span class="contract-address" onclick="copyToClipboard(this)" ontouchstart="copyToClipboard(this)">
+                        1danbdkjasnkcxzmqqiwjrqo9ejowfmnxmcnnncnamsd12nnxajsn33
+                    </span>
+                </h3>
+                <h3>3. Buy, HODL Like a Boss, Shill to the Moon—Bigly! 🚀🌙</h3>
             </p>
         </section>
         <section id="community" data-aos="fade-up">
             <h2>Community</h2>
+            <p>Join the PMURT squad and stay based. We're not just a community; we're a movement. A movement for memes, by memes, and of memes. No walls, just open channels. Come for the laughs, stay for the vibes.</p>
             <div class="social-links">
                 <a href="#" target="_blank"><img src="xx.png" alt="X (Twitter)" class="social-icon"></a>
                 <a href="#" target="_blank"><img src="telegram.png" alt="Telegram" class="social-icon"></a>
@@ -107,7 +116,7 @@
             const messageBox = document.createElement("span");
             messageBox.className = "copy-message";
             messageBox.innerText = message;
-            element.appendChild(messageBox);
+            element.parentElement.appendChild(messageBox); // 부모 요소(h3)에 추가
 
             // 2초 후 메시지 제거
             setTimeout(() => {
