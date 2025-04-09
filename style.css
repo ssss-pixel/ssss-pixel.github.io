@@ -13,6 +13,7 @@ body {
 }
 
 /* 히어로 섹션 */
+/* 히어로 섹션 */
 .hero {
     height: 100vh;
     display: flex;
@@ -20,48 +21,68 @@ body {
     align-items: center;
     text-align: center;
     background: url('71087529-de2e-4d11-8e03-9cb45f65d047.png') center no-repeat;
-    background-size: 80%; /* 이미지를 80% 크기로 줄임 */
+    background-size: 70%; /* 이미지를 더 줄여서 텍스트와 겹침 최소화 */
+    position: relative; /* 오버레이를 위해 position 설정 */
     animation: fadeIn 2s ease-in-out;
+}
+
+/* 반투명 오버레이 추가 */
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6); /* 반투명 검정 오버레이 */
+    z-index: 1;
+}
+
+/* 히어로 콘텐츠 */
+.hero-content {
+    position: relative;
+    z-index: 2; /* 오버레이 위에 텍스트가 오도록 설정 */
+}
+
+.hero-content h1 {
+    font-size: 4em;
+    font-weight: bold;
+    color: #fff;
+    text-transform: uppercase;
+    animation: slideInFromTop 1s ease-out;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.9); /* 그림자 강화 */
+}
+
+.hero-content h2 {
+    font-size: 2em;
+    color: #fff;
+    margin: 10px 0 20px;
+    animation: slideInFromTop 1.5s ease-out;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.9); /* 그림자 강화 */
+}
+
+.btn {
+    background-color: #ffd700; /* 버튼 배경은 노랑으로 유지 */
+    color: #000; /* 버튼 텍스트는 검정으로 변경해서 대비 높임 */
+    padding: 12px 24px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 1.2em;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    animation: slideInFromTop 2s ease-out;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* 버튼 텍스트에도 약간의 그림자 */
+}
+
+.btn:hover {
+    transform: scale(1.1);
+    background-color: #e6c200;
 }
 
 /* 페이드인 애니메이션 */
 @keyframes fadeIn {
     from { opacity: 0; }
     to { opacity: 1; }
-}
-
-.hero-content h1 {
-    font-size: 4em;
-    font-weight: bold;
-    color: #fff; /* 흰색으로 변경 */
-    text-transform: uppercase;
-    animation: slideInFromTop 1s ease-out;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); /* 가독성 위한 그림자 */
-}
-
-.hero-content h2 {
-    font-size: 2em;
-    color: #fff; /* 흰색으로 변경 */
-    margin: 10px 0 20px;
-    animation: slideInFromTop 1.5s ease-out;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); /* 가독성 위한 그림자 */
-}
-
-.btn {
-    background-color: #ffd700;
-    color: #fff; /* 흰색으로 변경 */
-    padding: 10px 20px;
-    text-decoration: none;
-    border-radius: 5px;
-    font-weight: bold;
-    transition: transform 0.3s ease, background-color 0.3s ease;
-    animation: slideInFromTop 2s ease-out;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); /* 가독성 위한 그림자 */
-}
-
-.btn:hover {
-    transform: scale(1.1);
-    background-color: #e6c200;
 }
 
 /* 슬라이드인 애니메이션 */
