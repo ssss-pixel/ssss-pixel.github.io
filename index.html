@@ -25,7 +25,7 @@
             <p>
                 <h3>Officially Not Trump 🚫</h3><br>
                 <h3>The Best Memes, Believe Me 🎉</h3><br>
-                <h3>No Tariff, No cap</h3><br>
+                <h3>No Tariff, No cap💯🔥</h3><br>
                 <h3>No Dumps, Only Pumps 📈</h3><br>
                 <h3>No Scams, Just Vibes 💎🙌</h3><br>
             </p>
@@ -65,6 +65,55 @@
             duration: 1000, // Animation duration in milliseconds
             once: true // Only run once
         });
+
+        // Contract Address 복사 기능
+        function copyToClipboard(element) {
+            const text = element.innerText;
+
+            // navigator.clipboard API 사용
+            if (navigator.clipboard) {
+                navigator.clipboard.writeText(text)
+                    .then(() => {
+                        showCopyMessage(element, "Copied! 🎉");
+                    })
+                    .catch(err => {
+                        console.error("Clipboard API failed:", err);
+                        fallbackCopyText(text, element);
+                    });
+            } else {
+                // Clipboard API가 지원되지 않을 경우 대체 방법
+                fallbackCopyText(text, element);
+            }
+        }
+
+        // 대체 복사 방법
+        function fallbackCopyText(text, element) {
+            const textArea = document.createElement("textarea");
+            textArea.value = text;
+            document.body.appendChild(textArea);
+            textArea.select();
+            try {
+                document.execCommand("copy");
+                showCopyMessage(element, "Copied! 🎉");
+            } catch (err) {
+                console.error("Fallback copy failed:", err);
+                showCopyMessage(element, "Copy failed 😢");
+            }
+            document.body.removeChild(textArea);
+        }
+
+        // 복사 메시지 표시
+        function showCopyMessage(element, message) {
+            const messageBox = document.createElement("span");
+            messageBox.className = "copy-message";
+            messageBox.innerText = message;
+            element.appendChild(messageBox);
+
+            // 2초 후 메시지 제거
+            setTimeout(() => {
+                messageBox.remove();
+            }, 2000);
+        }
     </script>
 </body>
 </html>
