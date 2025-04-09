@@ -103,9 +103,33 @@ section {
 
 section h2 {
     font-size: 2.5em;
-    color: #ffd700;
     margin-bottom: 20px;
     text-transform: uppercase;
+}
+
+/* 기본적으로 main 안의 h2를 하얀색으로 설정 */
+main h2 {
+    color: #fff; /* 하얀색 */
+}
+
+#about h2 {
+    color: #ffd700; /* 노란색 유지 */
+}
+
+#tokenomics h2 {
+    color: #ffd700; /* 라임 그린 */
+}
+
+#roadmap h2 {
+    color: #ffd700; /* 핫핑크 */
+}
+
+#community h2 {
+    color: #ffd700; /* 도저 블루 */
+}
+
+p h2 {
+    color: #fff; /* 하얀색 */
 }
 
 section p, section ul {
