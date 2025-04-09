@@ -21,7 +21,7 @@ body {
     align-items: center;
     text-align: center;
     background: url('71087529-de2e-4d11-8e03-9cb45f65d047.png') center no-repeat;
-    background-size: 70%;
+    background-size: 80%;
     position: relative;
     animation: fadeIn 2s ease-in-out;
 }
