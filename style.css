@@ -21,7 +21,7 @@ body {
     align-items: center;
     text-align: center;
     background: url('71087529-de2e-4d11-8e03-9cb45f65d047.png') center no-repeat;
-    background-size: 80%; /* 이미지를 더 줄여서 텍스트와 겹침 최소화 */
+    background-size: 90%; /* 이미지를 더 줄여서 텍스트와 겹침 최소화 */
     position: relative; /* 오버레이를 위해 position 설정 */
     animation: fadeIn 2s ease-in-out;
 }
@@ -116,7 +116,7 @@ section h2 {
 
 /* main 안의 h3 스타일 */
 main h3 {
-    font-size: 2.5em; /* 크기 키움 */
+    font-size: 2.0em; /* 크기 키움 */
     color: #fff; /* 하얀색 */
     margin-top: 15px; /* 위쪽 여백 추가 */
     margin-bottom: 10px; /* 아래쪽 여백 추가 */
