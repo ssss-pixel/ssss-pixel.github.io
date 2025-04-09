@@ -91,6 +91,13 @@ body {
     to { transform: translateY(0); opacity: 1; }
 }
 
+.vertical-equals {
+            display: inline-block;
+            transform: rotate(90deg); /* 90도 회전 */
+            font-size: 2em; /* 크기 조정 */
+            color: #fff; /* 하얀색 */
+        }
+
 /* 메인 콘텐츠 섹션 */
 main {
     padding: 20px;
