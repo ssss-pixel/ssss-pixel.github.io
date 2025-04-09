@@ -118,16 +118,21 @@ ul {
     list-style: none;
 }
 
-.social-links a {
-    color: #ffd700;
-    text-decoration: none;
-    margin: 0 10px;
-    font-size: 1.2em;
-    transition: transform 0.3s ease;
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* 아이콘 간 간격 */
+    margin-top: 15px;
 }
 
-.social-links a:hover {
-    transform: translateY(-5px);
+.social-icon {
+    width: 40px; /* 아이콘 크기 */
+    height: 40px;
+    transition: transform 0.3s ease; /* 호버 효과를 위한 트랜지션 */
+}
+
+.social-icon:hover {
+    transform: scale(1.2); /* 호버 시 살짝 확대 */
 }
 
 /* 푸터 */
