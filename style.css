@@ -21,7 +21,7 @@ body {
     align-items: center;
     text-align: center;
     background: url('71087529-de2e-4d11-8e03-9cb45f65d047.png') center no-repeat;
-    background-size: 80%;
+    background-size: contain; /* 이미지가 잘리지 않도록 */
     position: relative;
     animation: fadeIn 2s ease-in-out;
 }
@@ -42,53 +42,53 @@ body {
 .hero-content {
     position: relative;
     z-index: 2;
-    text-align: center; /* 모든 요소 중앙 정렬 */
+    text-align: center;
 }
 
 .hero-content h1 {
-    font-size: 4em;
+    font-size: 3em;
     font-weight: bold;
     color: #fff;
     text-transform: uppercase;
     animation: slideInFromTop 1s ease-out;
     text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.9);
-    margin-bottom: 15px; /* h1과 h2 간격 조정 */
+    margin-bottom: 15px;
 }
 
 .hero-content h2 {
-    font-size: 2em;
+    font-size: 1.5em;
     color: #fff;
     animation: slideInFromTop 1.5s ease-out;
     text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.9);
-    margin: 0 0 20px; /* 위쪽 0, 아래쪽 20px */
+    margin: 0 0 20px;
 }
 
 .hero-content h3 {
-    font-size: 1.2em; /* h3 크기 조정 */
+    font-size: 1em;
     color: #fff;
-    margin: 5px 0; /* h3 간격 조정 */
-    word-break: break-all; /* 긴 문자열 줄 바꿈 */
+    margin: 5px 0;
+    word-break: break-all;
 }
 
 .hero-content h3:first-of-type {
-    font-size: 1.5em; /* "CA"는 조금 더 크게 */
-    margin-bottom: 10px; /* CA와 Contract Address 간격 */
+    font-size: 1.2em;
+    margin-bottom: 10px;
 }
 
 .contract-address {
-    font-size: 0.9em; /* Contract Address는 조금 작게 */
-    color: #ccc; /* 살짝 회색빛으로 덜 눈에 띄게 */
-    word-break: break-all; /* 긴 문자열 줄 바꿈 */
-    display: block; /* 줄 바꿈 보장 */
-    cursor: pointer; /* 클릭 가능하다는 힌트 */
+    font-size: 0.7em;
+    color: #ccc;
+    word-break: break-all;
+    display: block;
+    cursor: pointer;
     transition: color 0.3s ease;
-    padding: 5px; /* 터치 영역 확대 */
-    position: relative; /* 메시지 위치를 위한 설정 */
+    padding: 5px;
+    position: relative;
 }
 
 .contract-address:hover,
 .contract-address:active {
-    color: #ffd700; /* 호버 시 노란색으로 */
+    color: #ffd700;
 }
 
 .copy-message {
@@ -98,7 +98,7 @@ body {
     background-color: rgba(0, 0, 0, 0.8);
     padding: 5px 10px;
     border-radius: 5px;
-    margin-top: -30px; /* Contract Address 위쪽으로 이동 */
+    margin-top: -30px;
     margin-left: 0;
     animation: fadeOut 2s ease forwards;
 }
@@ -112,16 +112,16 @@ body {
 .hero-content .btn {
     background-color: #ffd700;
     color: #000;
-    padding: 12px 24px;
+    padding: 10px 20px;
     text-decoration: none;
     border-radius: 5px;
     font-weight: bold;
-    font-size: 1.2em;
+    font-size: 1em;
     transition: transform 0.3s ease, background-color 0.3s ease;
     animation: slideInFromTop 2s ease-out;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
-    display: inline-block; /* 버튼을 블록 요소로 */
-    margin-top: 30px; /* h3와 버튼 간격 조정 */
+    display: inline-block;
+    margin-top: 20px;
 }
 
 .hero-content .btn:hover {
@@ -149,29 +149,29 @@ main {
 section {
     padding: 50px 0;
     text-align: center;
-    position: relative; /* 오버레이를 위한 설정 */
-    min-height: 400px; /* 섹션 높이 설정 */
+    position: relative;
+    min-height: 300px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: 20px 0; /* 섹션 간 간격 */
+    margin: 20px 0;
 }
 
 /* #community를 제외한 섹션에 배경 이미지와 오버레이 추가 */
 #about {
-    background: url('v.png') center no-repeat;
-    background-size: cover;
+    background: url('trump-meme.png') center no-repeat;
+    background-size: contain; /* 이미지가 잘리지 않도록 */
 }
 
 #tokenomics {
-    background: url('wine.png') center no-repeat;
-    background-size: cover;
+    background: url('moon-rocket.png') center no-repeat;
+    background-size: contain;
 }
 
 #roadmap {
-    background: url('dance.png') center no-repeat;
-    background-size: cover;
+    background: url('meme-coin.png') center no-repeat;
+    background-size: contain;
 }
 
 /* 반투명 오버레이 추가 */
@@ -184,7 +184,7 @@ section {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.5); /* 오버레이 투명도 조정 */
+    background: rgba(0, 0, 0, 0.5);
     z-index: 1;
 }
 
@@ -199,56 +199,52 @@ section {
 /* #community는 배경 없음 */
 #community {
     background: none;
-    min-height: auto; /* #community는 높이 조정 불필요 */
+    min-height: auto;
 }
 
 section h2 {
     margin-bottom: 20px;
     text-transform: uppercase;
+    font-size: 2em;
 }
 
-/* 기본적으로 main 안의 h2를 하얀색으로 설정 */
-main h2 {
-    color: #fff; /* 하얀색 */
-}
-
-/* 각 섹션의 h2 색상 및 텍스트 크기 개별 설정 */
+/* 각 섹션의 h2 크기 통일 */
 #about h2 {
-    color: #ffd700; /* 노란색 유지 */
-    font-size: 3em; /* 더 크게 */
+    color: #ffd700;
+    font-size: 2.5em;
 }
 
 #tokenomics h2 {
-    color: #00ff00; /* 라임 그린 */
-    font-size: 2.5em; /* 기본 크기 */
+    color: #00ff00;
+    font-size: 2em;
 }
 
 #roadmap h2 {
-    color: #ff69b4; /* 핫핑크 */
-    font-size: 2.2em; /* 살짝 작게 */
+    color: #ff69b4;
+    font-size: 1.8em;
 }
 
 #community h2 {
-    color: #1e90ff; /* 도저 블루 */
-    font-size: 2em; /* 더 작게 */
+    color: #1e90ff;
+    font-size: 1.6em;
 }
 
 /* main 안의 h3 스타일 */
 main h3 {
-    font-size: 1.8em; /* 크기 키움 */
-    color: #fff; /* 하얀색 */
-    margin-top: 15px; /* 위쪽 여백 추가 */
-    margin-bottom: 10px; /* 아래쪽 여백 추가 */
-    transition: transform 0.3s ease, color 0.3s ease; /* 부드러운 전환 효과 */
+    font-size: 1.5em;
+    color: #fff;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    transition: transform 0.3s ease, color 0.3s ease;
 }
 
 main h3:hover {
-    transform: scale(1.05); /* 살짝 커짐 */
-    color: #ffd700; /* 호버 시 노란색으로 변경 */
+    transform: scale(1.05);
+    color: #ffd700;
 }
 
 section p, section ul {
-    font-size: 1.2em;
+    font-size: 1em;
     max-width: 800px;
     margin: 0 auto;
 }
@@ -283,59 +279,9 @@ footer {
     color: #888;
 }
 
-/* 반응형 디자인 */
+/* 반응형 디자인 최소화 */
 @media (max-width: 768px) {
-    .hero-content h1 {
-        font-size: 3em;
-    }
-
-    .hero-content h2 {
-        font-size: 1.5em;
-    }
-
-    .hero-content h3 {
-        font-size: 1em;
-    }
-
-    .hero-content h3:first-of-type {
-        font-size: 1.2em;
-    }
-
-    .contract-address {
-        font-size: 0.7em;
-    }
-
-    .hero-content .btn {
-        font-size: 1em;
-        padding: 10px 20px;
-        margin-top: 20px;
-    }
-
-    section h2 {
-        font-size: 2em;
-    }
-
-    #about h2 {
-        font-size: 2.5em; /* 모바일에서 크기 조정 */
-    }
-
-    #tokenomics h2 {
-        font-size: 2em;
-    }
-
-    #roadmap h2 {
-        font-size: 1.8em;
-    }
-
-    #community h2 {
-        font-size: 1.6em;
-    }
-
-    main h3 {
-        font-size: 1.5em; /* 모바일에서 h3 크기 조정 */
-    }
-
-    section p, section ul {
-        font-size: 1em;
+    section {
+        padding: 40px 0;
     }
 }
