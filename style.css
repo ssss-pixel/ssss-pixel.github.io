@@ -33,16 +33,24 @@ body {
 .hero-content h1 {
     font-size: 4em;
     font-weight: bold;
-    color: #ffffff;
+    color: #ffd700;
     text-transform: uppercase;
     animation: slideInFromTop 1s ease-out;
 }
 
 .hero-content h2 {
     font-size: 2em;
-    color: #ffffff;
+    color: #ffd700;
     margin: 10px 0 20px;
     animation: slideInFromTop 1.5s ease-out;
+}
+
+.hero-content h1, .hero-content h2 {
+    color: #fff; /* 텍스트 색상을 흰색으로 변경 */
+}
+
+.btn {
+    color: #fff; /* 버튼 텍스트도 흰색으로 변경 */
 }
 
 .btn {
