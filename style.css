@@ -19,7 +19,7 @@ body {
     justify-content: center;
     align-items: center;
     text-align: center;
-    background: #000; /* 이미지가 있다면: background: url('your-image.jpg') center/cover no-repeat; */
+    background: url('71087529-de2e-4d11-8e03-9cb45f65d047.png') center/cover no-repeat;
     animation: fadeIn 2s ease-in-out;
 }
 
